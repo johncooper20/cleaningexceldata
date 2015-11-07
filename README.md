@@ -2,7 +2,7 @@
 
 While cleaning data for a data analysis project in R, I came across a very big (> 100 MB) Excel file (xlsx) containing most of the data. There was no codebook, so I naturally wanted to open the file in Excel first, and have a look at it before loading it into R. It took a very long time to open and when it did, Excel often produced a "not enough resources" error at any modification to the file.
 
-Trying to open the file in R using `read.table()`, `read.xlsx()`, `read.xlsx2()`, or using most of the solutions mentioned [here](http://www.r-bloggers.com/read-excel-files-from-r/), took even longer than opening it in Excel and wasn't always successful. 
+Trying to open the file in R using `read.table()`, `read.xlsx()`, `read.xlsx2()`, or using most of the solutions mentioned here, took even longer than opening it in Excel and wasn't always successful. 
 
 In this short guide, I am sharing how I quickly worked around this issue. In particular, how I pre-processed the Excel sheet before reading it into R.
 
@@ -26,7 +26,7 @@ My first objective was to reduce the size of the file so I can manipulate it. I 
 
 The above steps reduced the file size to 3.5 MB. It is important to mention that the first 4 steps paved the way to steps 5 and 6. Copying and pasting columns (step 5) was impossible without reducing the file size considerably first. 
 
-I could have loaded the new Excel file resulting from step 5, into R, but I decided to do more cleaning in Excel first:
+I could have loaded the new Excel file resulting from step 5, into R, but I decided to do more [cleaning](http://www.carpetscleaners.com.au/) in Excel first:
    
 7. I **removed empty columns between populated ones**, so that all the variables are stacked to the left.
 
